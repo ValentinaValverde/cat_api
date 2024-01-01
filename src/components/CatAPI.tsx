@@ -11,14 +11,13 @@ const CatAPI: FC = () => {
       const { data } = await axios.get(
         "https://api.thecatapi.com/v1/images/search"
       );
-      console.log(
-        "DATA",
-        // something to do with types:
-        data.map((data) => {
-          console.log("URL", data.url);
-          setImgUrl(data.url);
-        })
-      );
+      console.log("DATA", data);
+
+      // something to do with types:
+      data.map((data) => {
+        console.log("URL", data.url);
+        setImgUrl(data.url);
+      });
     } catch (error) {
       console.log("ERROR", error);
     } finally {
@@ -29,6 +28,7 @@ const CatAPI: FC = () => {
   return (
     <>
       <div className="container">
+        <h1>Cat API</h1>
         <button className="button" onClick={handleClick}>
           Generate Cat Image
         </button>
