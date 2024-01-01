@@ -28,10 +28,13 @@ const CatAPI: FC = () => {
 
   return (
     <>
-      <p>hello from CAT API</p>
-      <button onClick={handleClick}>Button</button>
-      {loading && <p>Loading...</p>}
-      <img src={imgUrl} />
+      <div className="container">
+        <button className="button" onClick={handleClick}>
+          Generate Cat Image
+        </button>
+        {loading && <p>Loading...</p>}
+        <img className="cat_image" src={imgUrl} />
+      </div>
     </>
   );
 };

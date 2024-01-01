@@ -1,0 +1,17 @@
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  margin-bottom: 10px;
+}
+
+.cat_image {
+  border-radius: 16px;
+  width: 500px;
+  max-width: 90%;
+}
