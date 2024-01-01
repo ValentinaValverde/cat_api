@@ -12,9 +12,11 @@ const CatAPI: FC = () => {
         "https://api.thecatapi.com/v1/images/search"
       );
       console.log(
+        "DATA",
         // something to do with types:
         data.map((data) => {
           console.log("URL", data.url);
+          setImgUrl(data.url);
         })
       );
     } catch (error) {
@@ -29,7 +31,7 @@ const CatAPI: FC = () => {
       <p>hello from CAT API</p>
       <button onClick={handleClick}>Button</button>
       {loading && <p>Loading...</p>}
-      {/* <img src={data.url} /> */}
+      <img src={imgUrl} />
     </>
   );
 };
