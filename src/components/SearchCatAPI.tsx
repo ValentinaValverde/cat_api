@@ -12,9 +12,10 @@ const SearchCatAPI: FC = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `https://api.thecatapi.com/v1/images/${imageID}.jpg`
+        `https://api.thecatapi.com/v1/images/${imageID}`
       );
       console.log("DATA", data);
+      setImageID(data.url);
     } catch (error) {
       console.log("ERROR", error);
     } finally {
@@ -33,8 +34,9 @@ const SearchCatAPI: FC = () => {
         <form>
           <input type="text" onChange={handleChange} />
           <button onClick={handleSubmit}>Search</button>
-          {loading && <p>Loading...</p>}
         </form>
+        {loading && <p>Loading...</p>}
+        <img className="cat_image" src={imageID} />
       </div>
     </>
   );
