@@ -45,13 +45,7 @@ const SearchCatAPI: FC = () => {
 
 export default SearchCatAPI;
 
-// GOAL:
-// When the user types in the id into the search bar,
-// that id is put into the API url and it retrieves the
-// photo that matches the id
-
-// https://api.thecatapi.com/v1/images/{imageID}
-
-// const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-//     setUsername(event.target.value);
-// };
+// TO ADD:
+// - refactor to use await instead of axios
+// - add a backup in case the ID doesn't match anything
+// - next step: search by breed :o
