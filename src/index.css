@@ -6,12 +6,16 @@
   align-items: center;
 }
 
-.button {
-  margin-bottom: 10px;
-}
-
 .cat_image {
   width: 500px;
   max-width: 90%;
   border-radius: 16px;
+  margin: 20px;
+}
+
+.image_search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

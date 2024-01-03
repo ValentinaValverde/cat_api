@@ -29,8 +29,9 @@ const SearchCatAPI: FC = () => {
 
   return (
     <>
-      <div>
+      <div className="image_search">
         <h1>Looking for a Photo?</h1>
+        <p>type image id below:</p>
         <form>
           <input type="text" onChange={handleChange} />
           <button onClick={handleSubmit}>Search</button>
