@@ -33,7 +33,7 @@ const SearchCatAPI: FC = () => {
         <h1>Looking for a Photo?</h1>
         <p>type image id below:</p>
         <form>
-          <input type="text" onChange={handleChange} />
+          <input type="text" onChange={handleChange} className="input" />
           <button onClick={handleSubmit}>Search</button>
         </form>
         {loading && <p>Loading...</p>}
