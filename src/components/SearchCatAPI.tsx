@@ -4,6 +4,7 @@ import axios from "axios";
 const SearchCatAPI: FC = () => {
   const [loading, setLoading] = useState(false);
   const [imageID, setImageID] = useState(" ");
+  //   const [error, setError] = useState(" ");
 
   const handleSubmit = async () => {
     event?.preventDefault();
@@ -18,6 +19,7 @@ const SearchCatAPI: FC = () => {
       setImageID(data.url);
     } catch (error) {
       console.log("ERROR", error);
+      //   setError(error);
     } finally {
       setLoading(false);
     }
@@ -38,6 +40,7 @@ const SearchCatAPI: FC = () => {
         </form>
         {loading && <p>Loading...</p>}
         <img className="cat_image" src={imageID} />
+        {/* <p>{error}</p> */}
       </div>
     </>
   );
