@@ -12,10 +12,17 @@ const CatAPI: FC = () => {
         "https://api.thecatapi.com/v1/images/search"
       );
       console.log("DATA", data);
+      type Data = {
+        height: number;
+        id: string;
+        url: string;
+        width: number;
+      };
 
       // something to do with types:
-      data.map((data) => {
-        console.log("URL", data.url);
+      data.map((data: Data) => {
+        console.log("DATA:", data);
+        console.log("URL", data);
         setImgUrl(data.url);
       });
     } catch (error) {
